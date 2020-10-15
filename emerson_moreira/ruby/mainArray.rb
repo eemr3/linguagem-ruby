@@ -7,6 +7,7 @@ result = Manipular.new
 puts 'Buscar: Digite o estado '
 nome_estado = gets.chomp
 
+nome_estado
 result.busca_em_array(estados, nome_estado.strip)
 puts "\n"
 
