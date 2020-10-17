@@ -38,6 +38,16 @@ class Calc_Data
     @value.strftime("%d/%m/%Y")
   end
 
+  def soma_semana(sema)
+   result = sema.to_date + 1.week
+   result.strftime("%d/%m/%Y")
+  end
+  
+  def diminui_semana(sema)
+   result = sema.to_date - 1.week
+   result.strftime("%d/%m/%Y")
+  end
+
   def soma_mes(mes)
     @value = @value + mes.month
     @value.strftime("%d/%m/%Y")
@@ -49,5 +59,6 @@ class Calc_Data
   end
   
 end
+
 
 

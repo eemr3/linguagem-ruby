@@ -10,13 +10,15 @@ loop do
   puts "\nSelecione uma da opções"
   puts '1 - Somar dias'
   puts '2 - Subtrair dias'
-  puts '3 - Somar meses'
-  puts '4 - Subtrair meses'
-  puts '5 - Somar horas'
-  puts '6 - Subtrair horas'
-  puts '7 - Somar minutos'
-  puts '8 - Subtrair minutos'
-  puts '0 - Sair'
+  puts '3 - Somar semana'
+  puts '4 - Subtrair semana'
+  puts '5 - Somar meses'
+  puts '6 - Subtrair meses'
+  puts '7 - Somar horas'
+  puts '8 - Subtrair horas'
+  puts '9 - Somar minutos'
+  puts '0 - Subtrair minutos'
+  puts "\nS - Sair"
 
   options = gets.chomp.to_i
   case options
@@ -29,26 +31,34 @@ loop do
     dia_subtrair = gets.chomp.to_i
     resposta = result.diminui_dia(dia_subtrair)
   when 3
+    puts "Digite uma data para somar uma semana a ela. Ex: 10/10/2020"
+    semana_soma = gets.chomp
+    resposta = result.soma_semana(semana_soma)
+  when 4
+    puts "Digite uma data para subtrair uma semana a ela. Ex: 10/10/2020"
+    semana_soma = gets.chomp
+    resposta = result.diminui_semana(semana_soma)
+  when 5
     puts "Digite o valor de meses a ser somado"
     mes_somar = gets.chomp.to_i
     resposta = result.soma_mes(mes_somar)
-  when 4
+  when 6
     puts "Digite o valor de meses a ser subtraido"
     mes_subtrair = gets.chomp.to_i
     resposta = result.diminui_mes(mes_subtrair)
-  when 5
+  when 7
     puts "Digite o valor de horas a ser somada"
     horas_somar = gets.chomp.to_i
     resposta = result.soma_horas(horas_somar)
-  when 6
+  when 8
     puts "Digite o valor de horas a ser subtraida"
     horas_subtrair = gets.chomp.to_i
     resposta = result.diminui_horas(horas_subtrair)
-  when 7
+  when 9
     puts "Digite o valor de minutos a ser somado"
     minuto_subtrair = gets.chomp.to_i
     resposta = result.soma_minutos(minuto_subtrair)
-  when 8
+  when 10
     puts "Digite o valor de minutos a ser subtraido"
     minuto_subtrair = gets.chomp.to_i
     resposta = result.diminui_minutos(minuto_subtrair)
